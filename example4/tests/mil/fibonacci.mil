@@ -1,0 +1,52 @@
+func fibonacci
+. k
+= k, $0
+. t0
+= t0, k
+. t1
+= t1, 1
+. t2
+<= t2, t0, t1
+?:= L0, t2
+:= L1
+: L0
+. t3
+= t3, 1
+ret t3
+: L1
+. t4
+= t4, k
+. t5
+= t5, 1
+. t6
+- t6, t4, t5
+param t6
+. t7
+call fibonacci, t7
+. t8
+= t8, k
+. t9
+= t9, 2
+. t10
+- t10, t8, t9
+param t10
+. t11
+call fibonacci, t11
+. t12
++ t12, t7, t11
+ret t12
+endfunc
+
+func main
+. n
+. fib_n
+.< n
+. t13
+= t13, n
+param t13
+. t14
+call fibonacci, t14
+= fib_n, t14
+.> fib_n
+endfunc
+

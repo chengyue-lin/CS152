@@ -1,0 +1,20 @@
+function man; ##Error 3 - Not defining main function
+beginparams
+  n : integer;
+  ENDIF : integer; ##Error 5 - reserved word token
+  Ident : integer; ##Error 5 - reserved word rule
+endparams
+beginlocals
+  n : integer; ##Error 4 - declaring variable twice
+	m : array[5] of integer;
+  m : integer; ##Error 4 - Declaring var twice in same section
+  fib_n : array[10] of integer;
+  arr : array[0] of integer; ##Error 8 - Declaring array of size 0
+endlocals
+beginbody
+	n := 10;
+  l := 5; ##Error 1 - Using undeclared variable
+	fib_n[1] := fibonacci(n); ##Error 2 - Calling undeclared function
+	n[2] := 4; ##Error 7 - Indexing non-array variable
+  fib_n := 7; ##Error 6 - Forgetting to specify index for array variable
+endbody

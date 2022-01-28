@@ -1,0 +1,46 @@
+Identifier ENDIF's name is a reserved word.
+Identifier Ident's name is a reserved word.
+Identifier n is previously declared.
+Identifier m is previously declared.
+Declaring array ident arr of size <= 0.
+Identifier l is not declared.
+Calling undeclared function fibonacci.
+Provided index for non-array Identifier n.
+Did not provide index for array Identifier fib_n.
+func man
+. n
+. ENDIF
+. Ident
+= n, $0
+= ENDIF, $1
+= Ident, $2
+. n
+.[] m, 5
+. m
+.[] fib_n, 10
+.[] arr, 0
+. t0
+= t0, 10
+= n, t0
+. t1
+= t1, 5
+= l, t1
+. t2
+= t2, 1
+. t3
+= t3, n
+param t3
+. t4
+call fibonacci, t4
+[]= fib_n, t2, t4
+. t5
+= t5, 2
+. t6
+= t6, 4
+[]= n, t5, t6
+. t7
+= t7, 7
+= fib_n, t7
+endfunc
+
+No main function declared!
